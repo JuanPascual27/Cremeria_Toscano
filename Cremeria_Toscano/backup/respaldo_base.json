@@ -1,0 +1,1082 @@
+[
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2021-11-15T23:38:01.244Z",
+        "user": 1,
+        "content_type": 3,
+        "object_id": "1",
+        "object_repr": "Admins",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2021-11-15T23:48:14.440Z",
+        "user": 1,
+        "content_type": 3,
+        "object_id": "2",
+        "object_repr": "Vendedores",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2021-11-15T23:53:22.311Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "JorgeToscano",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2021-11-15T23:54:17.141Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "2",
+        "object_repr": "JorgeToscano",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Staff status\", \"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2021-11-15T23:56:53.510Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "MayraYazmin",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2021-11-15T23:57:46.780Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "MayraVargas",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Username\", \"First name\", \"Last name\", \"Email address\", \"Staff status\", \"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2021-11-17T21:23:37.329Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P01",
+        "object_repr": "Productos object (P01)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2021-11-18T02:46:59.994Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P01",
+        "object_repr": "Productos object (P01)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2021-11-18T02:57:08.959Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P02",
+        "object_repr": "Productos object (P02)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2021-11-18T02:57:53.294Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P03",
+        "object_repr": "Productos object (P03)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2021-11-18T02:58:24.080Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P03",
+        "object_repr": "Productos object (P03)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2021-11-18T02:58:24.225Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P01",
+        "object_repr": "Productos object (P01)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2021-11-18T02:58:47.573Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "3",
+        "object_repr": "MayraVargas",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2021-11-18T02:59:52.705Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "MayraVargas",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2021-11-18T03:00:17.619Z",
+        "user": 1,
+        "content_type": 4,
+        "object_id": "4",
+        "object_repr": "MayraVargas",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"First name\", \"Last name\", \"Email address\", \"Staff status\", \"Groups\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2021-11-18T03:01:30.432Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2P01",
+        "object_repr": "Productos object (2P01)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2021-11-18T03:01:56.261Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P01",
+        "object_repr": "Productos object (P01)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2021-11-18T03:02:35.696Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P01",
+        "object_repr": "Productos object (P01)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2021-11-18T03:02:35.751Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2P01",
+        "object_repr": "Productos object (2P01)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2021-11-18T03:03:24.683Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "2P01",
+        "object_repr": "Productos object (2P01)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 2,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 2,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 2,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 2,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 3,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 3,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 3,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 3,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add clientes",
+        "content_type": 7,
+        "codename": "add_clientes"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change clientes",
+        "content_type": 7,
+        "codename": "change_clientes"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete clientes",
+        "content_type": 7,
+        "codename": "delete_clientes"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view clientes",
+        "content_type": 7,
+        "codename": "view_clientes"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add compras",
+        "content_type": 8,
+        "codename": "add_compras"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change compras",
+        "content_type": 8,
+        "codename": "change_compras"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete compras",
+        "content_type": 8,
+        "codename": "delete_compras"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view compras",
+        "content_type": 8,
+        "codename": "view_compras"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add productos",
+        "content_type": 9,
+        "codename": "add_productos"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change productos",
+        "content_type": 9,
+        "codename": "change_productos"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete productos",
+        "content_type": 9,
+        "codename": "delete_productos"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view productos",
+        "content_type": 9,
+        "codename": "view_productos"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add proveedores",
+        "content_type": 10,
+        "codename": "add_proveedores"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change proveedores",
+        "content_type": 10,
+        "codename": "change_proveedores"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete proveedores",
+        "content_type": 10,
+        "codename": "delete_proveedores"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view proveedores",
+        "content_type": 10,
+        "codename": "view_proveedores"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add rutas",
+        "content_type": 11,
+        "codename": "add_rutas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change rutas",
+        "content_type": 11,
+        "codename": "change_rutas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete rutas",
+        "content_type": 11,
+        "codename": "delete_rutas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view rutas",
+        "content_type": 11,
+        "codename": "view_rutas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add vendedores",
+        "content_type": 12,
+        "codename": "add_vendedores"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change vendedores",
+        "content_type": 12,
+        "codename": "change_vendedores"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete vendedores",
+        "content_type": 12,
+        "codename": "delete_vendedores"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view vendedores",
+        "content_type": 12,
+        "codename": "view_vendedores"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add ventas",
+        "content_type": 13,
+        "codename": "add_ventas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change ventas",
+        "content_type": 13,
+        "codename": "change_ventas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete ventas",
+        "content_type": 13,
+        "codename": "delete_ventas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view ventas",
+        "content_type": 13,
+        "codename": "view_ventas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add detallescompras",
+        "content_type": 14,
+        "codename": "add_detallescompras"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change detallescompras",
+        "content_type": 14,
+        "codename": "change_detallescompras"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete detallescompras",
+        "content_type": 14,
+        "codename": "delete_detallescompras"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view detallescompras",
+        "content_type": 14,
+        "codename": "view_detallescompras"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add detallesventas",
+        "content_type": 15,
+        "codename": "add_detallesventas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change detallesventas",
+        "content_type": 15,
+        "codename": "change_detallesventas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete detallesventas",
+        "content_type": 15,
+        "codename": "delete_detallesventas"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view detallesventas",
+        "content_type": 15,
+        "codename": "view_detallesventas"
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+        "name": "Admins",
+        "permissions": [
+            13,
+            14,
+            15,
+            16,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52
+        ]
+    }
+},
+{
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+        "name": "Vendedores",
+        "permissions": [
+            25,
+            26,
+            27,
+            28,
+            57,
+            58,
+            59,
+            60,
+            49,
+            50,
+            51,
+            52
+        ]
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$1oSSjzjbyR1Hr50i34PyVc$kMk2N5eoTERrmuWSpZ8kKJ/LHnIQRNOTKGj0K8rjViI=",
+        "last_login": "2021-11-16T00:00:13.203Z",
+        "is_superuser": true,
+        "username": "JuanPas",
+        "first_name": "",
+        "last_name": "",
+        "email": "juanma.pas27@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-11-15T06:45:40.696Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$n5G9MMmMVeraPxQbVdnDP0$jcxjOY+xkzsLzb57lMznCJdQfgKXplvtjbEhkYnWU4w=",
+        "last_login": "2021-11-15T23:59:04.393Z",
+        "is_superuser": false,
+        "username": "JorgeToscano",
+        "first_name": "Jorge Antonio",
+        "last_name": "Toscano Lara",
+        "email": "jorge12345@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-11-15T23:53:21Z",
+        "groups": [
+            1
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+        "password": "pbkdf2_sha256$260000$vOl0kHtuLyi0LBdABdFkqI$1aB1/mvqbRrqB/8HVbVU1U4b6/hu69i2HcubpCJGUjo=",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "MayraVargas",
+        "first_name": "Mayra Yazmin",
+        "last_name": "Vargas Arredondo",
+        "email": "mayra12345@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-11-18T02:59:51Z",
+        "groups": [
+            2
+        ],
+        "user_permissions": []
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "Cremeria_ToscanoApp",
+        "model": "clientes"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "Cremeria_ToscanoApp",
+        "model": "compras"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "Cremeria_ToscanoApp",
+        "model": "productos"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "Cremeria_ToscanoApp",
+        "model": "proveedores"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "Cremeria_ToscanoApp",
+        "model": "rutas"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "Cremeria_ToscanoApp",
+        "model": "vendedores"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "Cremeria_ToscanoApp",
+        "model": "ventas"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "Cremeria_ToscanoApp",
+        "model": "detallescompras"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "Cremeria_ToscanoApp",
+        "model": "detallesventas"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "vmx4f4gdgm1q6sxbih1hj54me70atpra",
+    "fields": {
+        "session_data": ".eJxVjDsOwyAQBe9CHSEwn4WU6X0GxLIQnERYMnYV5e4RkoukfTPz3izEY6_h6HkLC7Erk-zyu2FMz9wGoEds95Wnte3bgnwo_KSdzyvl1-10_w5q7HXUSrksiwAnrTaiaCW8QtJuwgzGA0BCY40pCUnFmOwEWkiygJg8Fc8-X8X-N7E:1mmltV:ccr9VRsQ1SiVYtxZzCml3NGmW0zKAZhoktIk2F7bCtg",
+        "expire_date": "2021-11-30T00:00:13.342Z"
+    }
+},
+{
+    "model": "Cremeria_ToscanoApp.productos",
+    "pk": "P01",
+    "fields": {
+        "nombreproducto": "ajs",
+        "cantidadp": 124.0,
+        "precio": 124.0,
+        "detalles": "akjd",
+        "stock": 123.0,
+        "fechacaducidad": "2021-11-18"
+    }
+},
+{
+    "model": "Cremeria_ToscanoApp.productos",
+    "pk": "P02",
+    "fields": {
+        "nombreproducto": "Leche de vaca",
+        "cantidadp": 30.0,
+        "precio": 34.5,
+        "detalles": "Leche deslactosada",
+        "stock": 23.0,
+        "fechacaducidad": "2021-11-27"
+    }
+}
+]
