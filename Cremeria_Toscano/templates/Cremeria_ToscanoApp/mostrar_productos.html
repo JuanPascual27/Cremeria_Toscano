@@ -1,0 +1,34 @@
+{% extends 'Cremeria_ToscanoApp/index.html' %}
+{% block titulo %}Productos{% endblock titulo %}
+
+{% block formulario %}
+    {% if productos %}
+        <button><a href="{% url 'Cremeria_ToscanoApp:agregarproducto' %}">Agregar+</a></button>
+        <table>
+            <thead>
+                <tr>
+                    <th>IdProducto</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Fecha de Caducidad</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for Productos in productos %}
+                    <tr>
+                        <td><a href="{% url 'Cremeria_ToscanoApp:modificarproducto' Productos.idproducto %}">{{ Productos.idproducto }}</a></td>
+                        <td>{{ Productos.nombreproducto }}</td>
+                        <td>{{ Productos.cantidadp }}</td>
+                        <td>{{ Productos.precio}}</td>
+                        <td>{{ Productos.fechacaducidad }}</td>
+                        <td><a href="{% url 'Cremeria_ToscanoApp:eliminarproducto' Productos.idproducto %}">Eliminar</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <h2>No existen Productos registrados</h2>
+    {% endif %}
+{% endblock formulario %}

@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block titulo %} Cremeria Toscano {% endblock titulo %}</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/general.css' %}">
+</head>
+<body>
+    <header>
+		<div class="contenedor">
+			<h1>Cremeria Toscano</h1>
+        </div>
+	</header>
+    <main>
+        <div class="menu">
+            <nav class="barra">
+                <ul>
+                    <li><a href="{% url 'Cremeria_ToscanoApp:index' %}">Inicio</a></li>
+                    <li><a href="">Clientes</a></li>
+                    <li><a href="">Compras</a></li>
+                    <li><a href="">Detalles de compra</a></li>
+                    <li><a href="">Detalles de venta</a></li>
+                    <li><a href="{% url 'Cremeria_ToscanoApp:productos' %}">Productos</a></li>
+                    <li><a href="">Proveedores</a></li>
+                    <li><a href="">Rutas</a></li>
+                    <li><a href="">Vendedores</a></li>
+                    <li><a href="">Ventas</a></li>
+                    <li><a href="">Grupos</a></li>
+                    <li><a href="">Usuarios</a></li>
+                    <li><a href="{% url 'Cremeria_ToscanoApp:respaldar_restaurar' %}">Respaldos y Restauracion</a></li>
+                <li></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="pagina">
+            {% block formulario %}
+            
+            <h2>Bienvenidos</h2>
+            <h3>Aqui va el formulario</h3>
+            
+            {% endblock formulario %}
+        </div>
+    </main>
+</body>
+</html>
