@@ -2,8 +2,46 @@
 {% block titulo %}Productos | Agregar Producto{% endblock titulo %}
 
 {% block formulario %}
-    <form method="POST">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Agregar</button>
-    </form>
+    <div class="agregar">
+        <div class="titulo_formulario">
+            <h2>{% block titulof %}Agregar Producto{% endblock titulof %}</h2>
+        </div>
+        <div class="formulario">
+            <form method="POST">{% csrf_token %}
+                <div class="fila">
+                    <div class="lab">{{ form.idproducto.label }}</div>
+                    <div class="in">{{ form.idproducto }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.nombreproducto.label }}</div>
+                    <div class="in">{{ form.nombreproducto }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.cantidadp.label }}</div>
+                    <div class="in">{{ form.cantidadp }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.precio.label }}</div>
+                    <div class="in">{{ form.precio }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.detalles.label }}</div>
+                    <div class="in">{{ form.detalles }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.stock.label }}</div>
+                    <div class="in">{{ form.stock }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.fechacaducidad.label }}</div>
+                    <div class="in">{{ form.fechacaducidad }}</div>
+                </div>
+                <div class="botones">
+                    <div class="g"><button type="submit" class="guardar">{% block boton %}Agregar{% endblock boton %}</button></div>
+                    <div class="c"><a class="cancelar" href="{% url 'Cremeria_ToscanoApp:productos' %}">Cancelar</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
 {% endblock formulario %}

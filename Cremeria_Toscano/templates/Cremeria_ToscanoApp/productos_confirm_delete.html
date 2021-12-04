@@ -2,8 +2,15 @@
 {% block titulo %}Productos | Eliminar Producto{% endblock titulo %}
 
 {% block formulario %}
-    <form method="POST">{% csrf_token %}
-        <p><strong>¿Esta seguro de eliminar el registro {{ object }}?</strong></p>
-        <button type="submit">Confirmar</button>
-    </form>
+    <div class="confirmar">
+        <form method="POST">{% csrf_token %}
+            <div>
+                <h2><strong>¿Esta seguro de eliminar el Producto {{ object.idproducto }}?</strong></h2>
+            </div>
+            <div class="botones_con">
+                <div class="g"><button type="submit" class="guardar">Confirmar</button></div>
+                <div class="c"><a class="cancelar" href="{% url 'Cremeria_ToscanoApp:productos' %}">Cancelar</a></div>
+            </div>
+        </form>
+    </div>
 {% endblock formulario %}

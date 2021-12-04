@@ -2,12 +2,21 @@
 {% block titulo %}Respaldos y restauracion{% endblock titulo %}
 
 {% block formulario %}
-<form method="POST">{% csrf_token %}
-    <p>
-        Accion:
-        <input type="radio" name="accion" value="Respaldar">Respaldar
-        <input type="radio" name="accion" value="Restaurar">Restaurar
-    </p>
-    <button type="submit">Realizar</button>
-</form>
+    <div class="ryr">
+        <form method="POST">{% csrf_token %}
+            <div class="p">
+                <h2><strong>Accion:</strong></h2>
+                <div>
+                    <input type="radio" name="accion" value="Respaldar"><strong>Respaldar</strong>
+                </div>
+                <div>
+                    <input type="radio" name="accion" value="Restaurar"><strong>Restaurar</strong>
+                </div>
+            </div>
+            <div class="botones_con">
+                <div class="g"><button type="submit" class="guardar">Realizar</button></div>
+                <div class="c"><a class="cancelar" href="{% url 'Cremeria_ToscanoApp:productos' %}">Cancelar</a></div>
+            </div>
+        </form>
+    </div>
 {% endblock formulario %}
