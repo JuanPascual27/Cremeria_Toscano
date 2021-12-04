@@ -24,6 +24,11 @@ class MostrarProducto(ListView):
     context_object_name = 'productos'
     queryset = Productos.objects.all()
 
+    def post(self, request, *args, **kwargs):
+        buscar = request.POST['consulta']
+        productos = Productos.objects.filter(nombreproducto__contains=buscar)
+        return render(request,self.template_name,{"productos":productos})
+
 class AgregarProducto(CreateView):
     model = Productos
     form_class = ProductosForm
@@ -33,7 +38,7 @@ class AgregarProducto(CreateView):
 class ModificarProducto(UpdateView):
     model = Productos
     form_class = ProductosForm
-    template_name = 'Cremeria_ToscanoApp/formularios/agregar_producto.html'
+    template_name = 'Cremeria_ToscanoApp/formularios/modificar_producto.html'
     success_url = reverse_lazy('Cremeria_ToscanoApp:productos')
 
 class EliminarProducto(DeleteView):

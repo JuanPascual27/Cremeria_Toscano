@@ -14,20 +14,55 @@ class ProductosForm(forms.ModelForm):
             'fechacaducidad',
         ]
         labels = {
-            'idproducto': 'Id del Producto',
-            'nombreproducto': 'Nombre del producto',
-            'cantidadp': 'Cantidad',
-            'precio': 'Precio',
-            'detalles': 'Detalles',
-            'stock': 'Stock',
-            'fechacaducidad': 'Fecha de caducidad',
+            'idproducto': 'Id del Producto:',
+            'nombreproducto': 'Nombre del producto:',
+            'cantidadp': 'Cantidad:',
+            'precio': 'Precio:',
+            'detalles': 'Detalles:',
+            'stock': 'Stock:',
+            'fechacaducidad': 'Fecha de caducidad:',
         }
         widgets = {
-            'idproducto': forms.TextInput(),
-            'nombreproducto': forms.TextInput(),
-            'cantidadp': forms.NumberInput(),
-            'precio': forms.NumberInput(),
-            'detalles': forms.Textarea(),
-            'stock': forms.NumberInput(),
-            'fechacaducidad': forms.DateInput(),
+            'idproducto': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el Id del producto'
+                }
+            ),
+            'nombreproducto': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el nombre del producto'
+                }
+            ),
+            'cantidadp': forms.NumberInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese la cantidad existente del producto'
+                }
+            ),
+            'precio': forms.NumberInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el precio del producto'
+                }
+            ),
+            'detalles': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese algunos detalles del producto'
+                }
+            ),
+            'stock': forms.NumberInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese la cantidad de productos para vender'
+                }
+            ),
+            'fechacaducidad': forms.SelectDateWidget(
+                attrs = {
+                    'class': 'fecha',
+                    'placeholder': 'Ingrese la fecha de caducidad del producto'
+                }
+            ),
         }
