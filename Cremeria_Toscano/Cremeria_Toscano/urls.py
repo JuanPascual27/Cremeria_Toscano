@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls import url
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('', include(('Cremeria_ToscanoApp.urls','Cremeria_ToscanoApp')))
+    url('', include(('Cremeria_ToscanoApp.urls','Cremeria_ToscanoApp'))),
+    url(r'^favicon\.ico$',RedirectView.as_view(url='/static/img/favicon.ico')),
 ]
