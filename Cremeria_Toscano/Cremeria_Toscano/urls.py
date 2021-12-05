@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth.views import logout_then_login
 from django.conf.urls import url
 from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('', include(('Cremeria_ToscanoApp.urls','Cremeria_ToscanoApp'))),
+    path('logout/', logout_then_login, name='logout'),
     url(r'^favicon\.ico$',RedirectView.as_view(url='/static/img/favicon.ico')),
 ]
