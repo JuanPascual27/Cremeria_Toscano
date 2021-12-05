@@ -1,0 +1,38 @@
+{% load static %}
+{% load widget_tweaks %}
+<!doctype html>
+<html lang="es">
+<head>
+    <title>Login de Usuario</title>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}?ts=<?=time()?>">
+    <script type="text/javascript"></script>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="central">
+            <div id="login">
+                <div class="titulo">
+                    Bienvenido
+                </div>
+                <form id="loginform" method="POST">{% csrf_token %}
+                    {{ form.username|attr:'type:text'|attr:'name:usuario'|attr:'placeholder:Usuario'|attr:'required' }}
+                    {{ form.password|attr:'type:password'|attr:'name:password'|attr:'placeholder:Contraseña'|attr:'required' }}
+                    <button type="submit" title="Ingresar" name="Ingresar">Login</button>
+                </form>
+                <div class="pie-form">
+                    <a href="#">¿Perdiste tu contraseña?</a>
+                    <a href="#">¿No tienes Cuenta? Registrate</a>
+                </div>
+            </div>
+            <div class="inferior">
+                <a href="#">Todos los derechos reservados</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
