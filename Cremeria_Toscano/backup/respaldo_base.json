@@ -260,6 +260,45 @@
     }
 },
 {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2021-11-18T14:00:38.999Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P02",
+        "object_repr": "Productos object (P02)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2021-11-18T14:00:41.311Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P01",
+        "object_repr": "Productos object (P01)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2021-11-22T03:01:41.784Z",
+        "user": 1,
+        "content_type": 9,
+        "object_id": "P03",
+        "object_repr": "Productos object (P03)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Idproducto\"]}}]"
+    }
+},
+{
     "model": "auth.permission",
     "pk": 1,
     "fields": {
@@ -874,7 +913,7 @@
     "pk": 1,
     "fields": {
         "password": "pbkdf2_sha256$260000$1oSSjzjbyR1Hr50i34PyVc$kMk2N5eoTERrmuWSpZ8kKJ/LHnIQRNOTKGj0K8rjViI=",
-        "last_login": "2021-11-16T00:00:13.203Z",
+        "last_login": "2021-12-04T20:32:57.391Z",
         "is_superuser": true,
         "username": "JuanPas",
         "first_name": "",
@@ -1056,6 +1095,14 @@
     }
 },
 {
+    "model": "sessions.session",
+    "pk": "yia3g7s5qjoqiu6kwc84x0p8x9unz24l",
+    "fields": {
+        "session_data": ".eJxVjDsOwyAQBe9CHSEwn4WU6X0GxLIQnERYMnYV5e4RkoukfTPz3izEY6_h6HkLC7Erk-zyu2FMz9wGoEds95Wnte3bgnwo_KSdzyvl1-10_w5q7HXUSrksiwAnrTaiaCW8QtJuwgzGA0BCY40pCUnFmOwEWkiygJg8Fc8-X8X-N7E:1mtbiL:nEZYTKKSd9pQSKwsFDLNuDnh2FQrKXqwsBxuE1F5Gls",
+        "expire_date": "2021-12-18T20:32:57.589Z"
+    }
+},
+{
     "model": "Cremeria_ToscanoApp.productos",
     "pk": "P01",
     "fields": {
@@ -1071,12 +1118,72 @@
     "model": "Cremeria_ToscanoApp.productos",
     "pk": "P02",
     "fields": {
-        "nombreproducto": "Leche de vaca",
-        "cantidadp": 30.0,
-        "precio": 34.5,
-        "detalles": "Leche deslactosada",
+        "nombreproducto": "Otra crema pero esta esta mucho mas buen",
+        "cantidadp": 10.0,
+        "precio": 20.53,
+        "detalles": "lllllllllllllllllllllllllllllllllllllllllllllscjhbjacbkajbcs",
+        "stock": 10.0,
+        "fechacaducidad": "2021-11-17"
+    }
+},
+{
+    "model": "Cremeria_ToscanoApp.productos",
+    "pk": "P03",
+    "fields": {
+        "nombreproducto": "Crema batida",
+        "cantidadp": 8.0,
+        "precio": 1234.0,
+        "detalles": "lsklansacn",
         "stock": 23.0,
         "fechacaducidad": "2021-11-27"
+    }
+},
+{
+    "model": "Cremeria_ToscanoApp.productos",
+    "pk": "P04",
+    "fields": {
+        "nombreproducto": "Leche de cabra",
+        "cantidadp": 10.0,
+        "precio": 56.2,
+        "detalles": "askjdaak",
+        "stock": 22.0,
+        "fechacaducidad": "2021-11-18"
+    }
+},
+{
+    "model": "Cremeria_ToscanoApp.productos",
+    "pk": "P05",
+    "fields": {
+        "nombreproducto": "Leche Entera",
+        "cantidadp": 121844000000000.0,
+        "precio": 10928100000.0,
+        "detalles": null,
+        "stock": 9.21815e+20,
+        "fechacaducidad": "1241-12-12"
+    }
+},
+{
+    "model": "Cremeria_ToscanoApp.productos",
+    "pk": "P06",
+    "fields": {
+        "nombreproducto": "sda",
+        "cantidadp": 8.0,
+        "precio": 1.0,
+        "detalles": "asdk",
+        "stock": 3.0,
+        "fechacaducidad": "2021-11-18"
+    }
+},
+{
+    "model": "Cremeria_ToscanoApp.productos",
+    "pk": "P08",
+    "fields": {
+        "nombreproducto": "kasjdnk",
+        "cantidadp": 11.0,
+        "precio": 17.124,
+        "detalles": "ksajkfah",
+        "stock": 10.0,
+        "fechacaducidad": "2024-12-12"
     }
 }
 ]
