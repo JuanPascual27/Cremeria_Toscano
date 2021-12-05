@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/general.css' %}?ts=<?=time()?>">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
     <header>
@@ -19,19 +20,43 @@
             <nav class="barra">
                 <ul>
                     <li><a href="{% url 'Cremeria_ToscanoApp:index' %}">Inicio</a></li>
+                    {% if perms.Cremeria_ToscanoApp.view_clientes %}
                     <li><a href="">Clientes</a></li>
+                    {% endif %}
+                    {% if perms.Cremeria_ToscanoApp.view_compras %}
                     <li><a href="">Compras</a></li>
+                    {% endif %}
+                    {% if perms.Cremeria_ToscanoApp.view_detallescompras %}
                     <li><a href="">Detalles de compra</a></li>
+                    {% endif %}
+                    {% if perms.Cremeria_ToscanoApp.view_detallesventas %}
                     <li><a href="">Detalles de venta</a></li>
+                    {% endif %}
+                    {% if perms.Cremeria_ToscanoApp.view_productos %}
                     <li><a href="{% url 'Cremeria_ToscanoApp:productos' %}">Productos</a></li>
+                    {% endif %}
+                    {% if perms.Cremeria_ToscanoApp.view_proveedores %}
                     <li><a href="">Proveedores</a></li>
+                    {% endif %}
+                    {% if perms.Cremeria_ToscanoApp.view_rutas %}
                     <li><a href="">Rutas</a></li>
+                    {% endif %}
+                    {% if perms.Cremeria_ToscanoApp.view_vendedores %}
                     <li><a href="">Vendedores</a></li>
+                    {% endif %}
+                    {% if perms.Cremeria_ToscanoApp.view_ventas %}
                     <li><a href="">Ventas</a></li>
+                    {% endif %}
+                    {% if perms.auth.view_group %}
                     <li><a href="">Grupos</a></li>
+                    {% endif %}
+                    {% if perms.auth.view_user %}
                     <li><a href="">Usuarios</a></li>
+                    {% endif %}
+                    {% if perms.Cremeria_ToscanoApp.view_productos %}
                     <li><a href="{% url 'Cremeria_ToscanoApp:respaldar_restaurar' %}">Respaldos y Restauracion</a></li>
-                <li></li>
+                    {% endif %}
+                    <li><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
                 </ul>
             </nav>
         </div>
@@ -40,9 +65,19 @@
             
             <h2>Bienvenidos</h2>
             <h3>Aqui va el formulario</h3>
+            <p>Usuario: {{ user.username }}</p>
             
             {% endblock formulario %}
         </div>
     </main>
+    {% if messages %}
+    <script>
+        var html_mensaje = '';
+        //{% for mensaje in messages %}
+            html_mensaje += '{{ mensaje }}';
+        //{% endfor %}
+        swal("Error!", html_mensaje, "error");
+    </script>
+    {% endif %}
 </body>
 </html>

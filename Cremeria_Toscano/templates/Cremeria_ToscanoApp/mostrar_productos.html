@@ -9,9 +9,11 @@
                 <button type="submit" class="boton_buscar">Buscar</button>
             </form>
         </div>
+        {% if perms.Cremeria_ToscanoApp.add_productos %}
         <div class="boton">
             <a class="boton_agregar" href="{% url 'Cremeria_ToscanoApp:agregarproducto' %}">Agregar +</a>
         </div>
+        {% endif %}
     </div>
     {% if productos %}
         <div class="dtabla">
@@ -23,18 +25,28 @@
                         <th>Cantidad</th>
                         <th>Precio</th>
                         <th>Fecha de Caducidad</th>
+                        {% if perms.Cremeria_ToscanoApp.delete_productos %}
                         <th></th>
+                        {% endif %}
                     </tr>
                 </thead>
                 <tbody>
                     {% for Productos in productos %}
                         <tr>
-                            <td><a href="{% url 'Cremeria_ToscanoApp:modificarproducto' Productos.idproducto %}">{{ Productos.idproducto }}</a></td>
+                            <td>
+                            {% if perms.Cremeria_ToscanoApp.change_productos %}
+                                <a href="{% url 'Cremeria_ToscanoApp:modificarproducto' Productos.idproducto %}">{{ Productos.idproducto }}</a>
+                            {% else %}
+                                {{ Productos.idproducto }}
+                            {% endif %}
+                            </td>
                             <td>{{ Productos.nombreproducto }}</td>
                             <td>{{ Productos.cantidadp }}</td>
                             <td>${{ Productos.precio}}</td>
                             <td>{{ Productos.fechacaducidad }}</td>
+                            {% if perms.Cremeria_ToscanoApp.delete_productos %}
                             <td><a href="{% url 'Cremeria_ToscanoApp:eliminarproducto' Productos.idproducto %}">Eliminar</a></td>
+                            {% endif %}
                         </tr>
                     {% endfor %}
                 </tbody>
