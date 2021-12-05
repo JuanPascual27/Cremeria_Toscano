@@ -1,6 +1,10 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import PermissionRequiredMixin
+from .mixins import ValidarPermisosMixin
 
 #Para respaldar y restaurar
 import os
@@ -15,10 +19,21 @@ from .forms import *
     3- options(): para utilizar opciones del view
 '''
 
-class Inicio(TemplateView):
-    template_name = 'Cremeria_ToscanoApp/index.html'
+class Ingreso(LoginView):
+    template_name = 'Cremeria_ToscanoApp/login.html'
 
-class MostrarProducto(ListView):
+class Inicio(LoginRequiredMixin, TemplateView):
+    template_name = 'Cremeria_ToscanoApp/index.html'
+'''
+    def get(self, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return render(self.template_name)
+        else:
+            return redirect('Cremeria_ToscanoApp:login')'''
+
+class MostrarProducto(LoginRequiredMixin, ValidarPermisosMixin, ListView):
+    permission_required = 'Cremeria_ToscanoApp.view_productos'
+
     model = Productos
     template_name = 'Cremeria_ToscanoApp/mostrar_productos.html'
     context_object_name = 'productos'
@@ -29,31 +44,36 @@ class MostrarProducto(ListView):
         productos = Productos.objects.filter(nombreproducto__contains=buscar)
         return render(request,self.template_name,{"productos":productos})
 
-class AgregarProducto(CreateView):
+class AgregarProducto(LoginRequiredMixin, ValidarPermisosMixin, CreateView):
+    permission_required = 'Cremeria_ToscanoApp.add_productos'
+
     model = Productos
     form_class = ProductosForm
     template_name = 'Cremeria_ToscanoApp/formularios/agregar_producto.html'
     success_url = reverse_lazy('Cremeria_ToscanoApp:productos')
 
-class ModificarProducto(UpdateView):
+class ModificarProducto(LoginRequiredMixin, ValidarPermisosMixin, UpdateView):
+    permission_required = 'Cremeria_ToscanoApp.change_productos'
+
     model = Productos
     form_class = ProductosForm
     template_name = 'Cremeria_ToscanoApp/formularios/modificar_producto.html'
     success_url = reverse_lazy('Cremeria_ToscanoApp:productos')
 
-class EliminarProducto(DeleteView):
+class EliminarProducto(LoginRequiredMixin, ValidarPermisosMixin, DeleteView):
+    permission_required = 'Cremeria_ToscanoApp.delete_productos'
+
     model = Productos
     success_url = reverse_lazy('Cremeria_ToscanoApp:productos')
 
-def respaldar_restaurar(request):
-    if request.method == 'POST':
-        datos = request.POST.dict()
-        accion = datos.get("accion")
+class RespaldarRestaurar(LoginRequiredMixin, TemplateView):
+    template_name = 'Cremeria_ToscanoApp/respaldar_restaurar.html'
+    
+    def post(self, request, *args, **kwargs):
+        accion = request.POST['accion']
         print(accion)
         if accion == "Respaldar":
             os.system('Python manage.py dumpdata --format=json --indent=4 > backup/respaldo_base.json')
         else:
             os.system('Python manage.py loaddata backup/respaldo_base.json')
         return redirect('Cremeria_ToscanoApp:index')
-    else:
-        return render(request,'Cremeria_ToscanoApp/respaldar_restaurar.html')

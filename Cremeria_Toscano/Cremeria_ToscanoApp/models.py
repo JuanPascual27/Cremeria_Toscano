@@ -64,7 +64,6 @@ class Productos(models.Model):
 	#def __str__ (self):
         #return "{}".format(self.nomb)
 
-
 class Proveedores(models.Model):
     idproveedor = models.CharField(db_column='IdProveedor', primary_key=True, max_length=4)  # Field name made lowercase.
     nomproveedor = models.CharField(db_column='NomProveedor', max_length=40)  # Field name made lowercase.
