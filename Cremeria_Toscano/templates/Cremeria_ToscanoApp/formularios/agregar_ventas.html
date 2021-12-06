@@ -1,0 +1,35 @@
+{% extends 'Cremeria_ToscanoApp/index.html' %}
+{% block titulo %}Ventas | Agregar Venta{% endblock titulo %}
+
+{% block formulario %}
+    <div class="agregar">
+        <div class="titulo_formulario">
+            <h2>{% block titulof %}Agregar Venta{% endblock titulof %}</h2>
+        </div>
+        <div class="formulario">
+            <form method="POST">{% csrf_token %}
+                <div class="fila">
+                    <div class="lab">{{ form.idventa.label }}</div>
+                    <div class="in">{{ form.idventa }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.idcliente.label }}</div>
+                    <div class="in">{{ form.idcliente }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.fechav.label }}</div>
+                    <div class="in">{{ form.fechav }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.total.label }}</div>
+                    <div class="in">{{ form.total }}</div>
+                </div>
+                <div class="botones">
+                    <div class="g"><button type="submit" class="guardar">{% block boton %}Agregar{% endblock boton %}</button></div>
+                    <div class="c"><a class="cancelar" href="{% url 'Cremeria_Toscano_1:ventas' %}">Cancelar</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+{% endblock formulario %}
