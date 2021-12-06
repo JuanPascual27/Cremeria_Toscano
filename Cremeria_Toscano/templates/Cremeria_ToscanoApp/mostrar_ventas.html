@@ -1,0 +1,56 @@
+{% extends 'Cremeria_ToscanoApp/index.html' %}
+{% block titulo %}Ventas{% endblock titulo %}
+
+{% block formulario %}
+    <div class="acciones">
+        <div class="consultar">
+            <form method="POST">{% csrf_token %}
+                <input type="text", class="texto" name="consulta" placeholder="Buscar Venta">
+                <button type="submit" class="boton_buscar">Buscar</button>
+            </form>
+        </div>
+        {% if perms.Cremeria_Toscano_1.add_ventas %}
+        <div class="boton">
+            <a class="boton_agregar" href="{% url 'Cremeria_Toscano_1:agregarventa' %}">Agregar </a>
+        </div>
+        {% endif %}
+    </div>
+    {% if ventas %}
+        <div class="dtabla">
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>IdVenta</th>
+                        <th>IdCliente</th>
+                        <th>fechaV</th>
+                        <th>Total</th>
+                        {% if perms.Cremeria_Toscano_1.delete_Ventas %}
+                        <th></th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Ventas in ventas %}
+                        <tr>
+                            <td>
+                            {% if perms.Cremeria_Toscano_1.change_ventas %}
+                                <a href="{% url 'Cremeria_Toscano_1:modificarventa' Ventas.idventa %}">{{ Ventas.idventa }}</a>
+                            {% else %}
+                                {{ Ventas.idventa }}
+                            {% endif %}
+                            </td>
+                            <td>{{ Ventas.idcliente }}</td>
+                            <td>{{ Ventas.fechav }}</td>
+                            <td>${{ Ventas.total}}</td>
+                            {% if perms.Cremeria_Toscano_1.delete_ventas %}
+                            <td><a href="{% url 'Cremeria_Toscano_1:eliminarventa' Ventas.idventa %}">Eliminar</a></td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <h2>No existen Ventas registrados</h2>
+    {% endif %}
+{% endblock formulario %}
