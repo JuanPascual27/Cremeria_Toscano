@@ -30,7 +30,7 @@
                     <li><a href="">Detalles de compra</a></li>
                     {% endif %}
                     {% if perms.Cremeria_ToscanoApp.view_detallesventas %}
-                    <li><a href="">Detalles de venta</a></li>
+                    <li><a href="{% url 'Cremeria_ToscanoApp:detallesventas' %}">Detalles de venta</a></li>
                     {% endif %}
                     {% if perms.Cremeria_ToscanoApp.view_productos %}
                     <li><a href="{% url 'Cremeria_ToscanoApp:productos' %}">Productos</a></li>
