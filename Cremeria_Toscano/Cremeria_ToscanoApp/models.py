@@ -14,6 +14,9 @@ class Clientes(models.Model):
         managed = False
         db_table = 'clientes'
 
+    def __str__(self):
+        return self.idcliente
+
 class Compras(models.Model):
     idcompra = models.CharField(db_column='IdCompra', primary_key=True, max_length=4)  # Field name made lowercase.
     idproveedor = models.ForeignKey('Proveedores', models.DO_NOTHING, db_column='IdProveedor')  # Field name made lowercase.
@@ -61,8 +64,8 @@ class Productos(models.Model):
         managed = False
         db_table = 'productos'
 
-	#def __str__ (self):
-        #return "{}".format(self.nomb)
+    def __str__(self):
+        return self.idproducto
 
 class Proveedores(models.Model):
     idproveedor = models.CharField(db_column='IdProveedor', primary_key=True, max_length=4)  # Field name made lowercase.
@@ -71,6 +74,9 @@ class Proveedores(models.Model):
     class Meta:
         managed = False
         db_table = 'proveedores'
+    
+    def __str__(self):
+        return self.idproveedor
 
 class Rutas(models.Model):
     idruta = models.CharField(db_column='IdRuta', primary_key=True, max_length=4)  # Field name made lowercase.
@@ -80,6 +86,9 @@ class Rutas(models.Model):
     class Meta:
         managed = False
         db_table = 'rutas'
+    
+    def __str__(self):
+        return self.idruta
 
 class Vendedores(models.Model):
     idvendedor = models.CharField(db_column='IdVendedor', primary_key=True, max_length=4)  # Field name made lowercase.
@@ -88,6 +97,9 @@ class Vendedores(models.Model):
     class Meta:
         managed = False
         db_table = 'vendedores'
+
+    def __str__(self):
+        return self.idvendedor
 
 class Ventas(models.Model):
     idventa = models.CharField(db_column='IdVenta', primary_key=True, max_length=4)  # Field name made lowercase.
@@ -98,3 +110,6 @@ class Ventas(models.Model):
     class Meta:
         managed = False
         db_table = 'ventas'
+    
+    def __str__(self):
+        return self.idventa

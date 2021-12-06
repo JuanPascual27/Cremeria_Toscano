@@ -10,4 +10,9 @@ urlpatterns = [
     path('modificarProducto/<pk>', ModificarProducto.as_view(), name='modificarproducto'),
     path('eliminarProducto/<pk>', EliminarProducto.as_view(), name='eliminarproducto'),
     path('respaldar_restaurar/', RespaldarRestaurar.as_view(), name='respaldar_restaurar'),
+
+    path('detallesVentas/', MostrarDetallesVenta.as_view(), name='detallesventas'),
+    path('agregarDetallesVenta/', AgregarDetallesVenta.as_view(), name='agregardetallesventas'),
+    path('modificarDetallesVenta/<pk>', ModificarDetallesVenta.as_view(), name='modificardetallesventas'),
+    path('eliminarDetallesVenta/<pk>', EliminarDetallesVenta.as_view(), name='eliminardetallesventas'),
 ]

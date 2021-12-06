@@ -66,3 +66,53 @@ class ProductosForm(forms.ModelForm):
                 }
             ),
         }
+
+class DetallesVentasForm(forms.ModelForm):
+    class Meta:
+        model = Detallesventas
+        fields = [
+            'idventa',
+            'idproducto',
+            'cantidadpv',
+            'costov',
+            'subtotalv',
+        ]
+        labels = {
+            'idventa': 'Id de la venta',
+            'idproducto': 'Id del producto',
+            'cantidadpv': 'Cantidad de producto venta',
+            'costov': 'Costo de venta',
+            'subtotalv': 'Subtotal de la venta',
+        }
+        widgets = {
+            'idventa': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el Id de la venta'
+                }
+            ),
+            'idproducto': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el Id del producto'
+                }
+            ),
+            'cantidadpv': forms.NumberInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese la cantidad del producto que se vendio'
+                }
+            ),
+            'costov': forms.NumberInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el costo del producto en la venta'
+                }
+            ),
+            'subtotalv': forms.NumberInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el subtotalde la venta'
+                }
+            ),
+        }

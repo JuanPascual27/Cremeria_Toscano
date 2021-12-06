@@ -66,6 +66,43 @@ class EliminarProducto(LoginRequiredMixin, ValidarPermisosMixin, DeleteView):
     model = Productos
     success_url = reverse_lazy('Cremeria_ToscanoApp:productos')
 
+
+class MostrarDetallesVenta(LoginRequiredMixin, ValidarPermisosMixin, ListView):
+    permission_required = 'Cremeria_ToscanoApp.view_detallesventas'
+
+    model = Detallesventas
+    template_name = 'Cremeria_ToscanoApp/mostrar_detallesventas.html'
+    context_object_name = 'detallesventas'
+    queryset = Detallesventas.objects.all()
+
+    def post(self, request, *args, **kwargs):
+        buscar = request.POST['consulta']
+        detallesventas = Detallesventas.objects.filter(idventa__idventa__icontains=buscar)
+        return render(request,self.template_name,{"detallesventas":detallesventas})
+
+class AgregarDetallesVenta(LoginRequiredMixin, ValidarPermisosMixin, CreateView):
+    permission_required = 'Cremeria_ToscanoApp.add_detallesventas'
+
+    model = Detallesventas
+    form_class = DetallesVentasForm
+    template_name = 'Cremeria_ToscanoApp/formularios/agregar_detallesventa.html'
+    success_url = reverse_lazy('Cremeria_ToscanoApp:detallesventas')
+
+class ModificarDetallesVenta(LoginRequiredMixin, ValidarPermisosMixin, UpdateView):
+    permission_required = 'Cremeria_ToscanoApp.change_detallesventas'
+
+    model = Detallesventas
+    form_class = DetallesVentasForm
+    template_name = 'Cremeria_ToscanoApp/formularios/modificar_detallesventa.html'
+    success_url = reverse_lazy('Cremeria_ToscanoApp:detallesventas')
+
+class EliminarDetallesVenta(LoginRequiredMixin, ValidarPermisosMixin, DeleteView):
+    permission_required = 'Cremeria_ToscanoApp.delete_detallesventas'
+
+    model = Detallesventas
+    success_url = reverse_lazy('Cremeria_ToscanoApp:detallesventas')
+
+
 class RespaldarRestaurar(LoginRequiredMixin, TemplateView):
     template_name = 'Cremeria_ToscanoApp/respaldar_restaurar.html'
     
