@@ -100,6 +100,7 @@ class DetallesVentasForm(forms.ModelForm):
             'cantidadpv': forms.NumberInput(
                 attrs = {
                     'class': 'input_texto',
+                    'name': 'cantidadpv',
                     'placeholder': 'Ingrese la cantidad del producto que se vendio'
                 }
             ),
