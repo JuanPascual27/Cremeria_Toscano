@@ -87,6 +87,22 @@ class AgregarDetallesVenta(LoginRequiredMixin, ValidarPermisosMixin, CreateView)
     form_class = DetallesVentasForm
     template_name = 'Cremeria_ToscanoApp/formularios/agregar_detallesventa.html'
     success_url = reverse_lazy('Cremeria_ToscanoApp:detallesventas')
+    
+    def post(self, request, *args, **kwargs):
+        register = DetallesVentasForm(request.POST)
+        if register.is_valid():
+            with transaction.atomic():
+                try:
+                    if int(request.POST['cantidadpv']) <= 0:
+                        y = 1/0
+                    else:
+                        y = 1
+                        register.save()
+                except Exception as e:
+                    messages.error(request, 'Debes ingresar una cantidad de producto mayor a 0')
+        else:
+            pass
+        return redirect('Cremeria_ToscanoApp:detallesventas')
 
 class ModificarDetallesVenta(LoginRequiredMixin, ValidarPermisosMixin, UpdateView):
     permission_required = 'Cremeria_ToscanoApp.change_detallesventas'
