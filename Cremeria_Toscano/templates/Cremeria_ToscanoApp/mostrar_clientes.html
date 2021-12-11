@@ -9,9 +9,9 @@
                 <button type="submit" class="boton_buscar">Buscar</button>
             </form>
         </div>
-        {% if perms.Cremeria_ToscanoApp.add_clientes %}
+        {% if perms.Cremeria_Toscano_1.add_clientes %}
         <div class="boton">
-            <a class="boton_agregar" href="{% url 'Cremeria_ToscanoApp:agregarcliente' %}">Agregar +</a>
+            <a class="boton_agregar" href="{% url 'Cremeria_Toscano_1:agregarcliente' %}">Agregar +</a>
         </div>
         {% endif %}
     </div>
@@ -26,7 +26,7 @@
                         <th>Direccion Cliente</th>
                         <th>Telefono/Celular</th>
                         <th>Adeudos</th>
-                        {% if perms.Cremeria_ToscanoApp.delete_clientes %}
+                        {% if perms.Cremeria_Toscano_1.delete_clientes %}
                         <th></th>
                         {% endif %}
                     </tr>
@@ -35,8 +35,8 @@
                     {% for Clientes in clientes %}
                         <tr>
                             <td>
-                            {% if perms.Cremeria_ToscanoApp.change_clientes %}
-                                <a href="{% url 'Cremeria_ToscanoApp:modificarcliente' Clientes.idcliente %}">{{ Clientes.idcliente }}</a>
+                            {% if perms.Cremeria_Toscano_1.change_clientes %}
+                                <a href="{% url 'Cremeria_Toscano_1:modificarcliente' Clientes.idcliente %}">{{ Clientes.idcliente }}</a>
                             {% else %}
                                 {{ Clientes.idcliente }}
                             {% endif %}
@@ -46,8 +46,8 @@
                             <td>{{ Clientes.direccioncliente }}</td>
                             <td>{{ Clientes.telefonocliente }}</td>
                             <td>${{ Clientes.adeudos }}</td>
-                            {% if perms.Cremeria_ToscanoApp.delete_clientes %}
-                            <td><a href="{% url 'Cremeria_ToscanoApp:eliminarcliente' Clientes.idcliente %}">Eliminar</a></td>
+                            {% if perms.Cremeria_Toscano_1.delete_clientes %}
+                            <td><a href="{% url 'Cremeria_Toscano_1:eliminarcliente' Clientes.idcliente %}">Eliminar</a></td>
                             {% endif %}
                         </tr>
                     {% endfor %}
