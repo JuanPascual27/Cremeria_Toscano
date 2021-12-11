@@ -9,9 +9,9 @@
                 <button type="submit" class="boton_buscar">Buscar</button>
             </form>
         </div>
-        {% if perms.Cremeria_ToscanoApp.add_proveedores %}
+        {% if perms.Cremeria_Toscano_1.add_proveedores %}
         <div class="boton">
-            <a class="boton_agregar" href="{% url 'Cremeria_ToscanoApp:agregarproveedor' %}">Agregar +</a>
+            <a class="boton_agregar" href="{% url 'Cremeria_Toscano_1:agregarproveedor' %}">Agregar +</a>
         </div>
         {% endif %}
     </div>
@@ -22,7 +22,7 @@
                     <tr>
                         <th>IdProveedor</th>
                         <th>Nombre Proveedor</th>
-                        {% if perms.Cremeria_ToscanoApp.delete_proveedores %}
+                        {% if perms.Cremeria_Toscano_1.delete_proveedores %}
                         <th></th>
                         {% endif %}
                     </tr>
@@ -31,15 +31,15 @@
                     {% for Proveedores in proveedores %}
                         <tr>
                             <td>
-                            {% if perms.Cremeria_ToscanoApp.change_proveedores %}
-                                <a href="{% url 'Cremeria_ToscanoApp:modificarproveedor' Proveedores.idproveedor %}">{{ Proveedores.idproveedor }}</a>
+                            {% if perms.Cremeria_Toscano_1.change_proveedores %}
+                                <a href="{% url 'Cremeria_Toscano_1:modificarproveedor' Proveedores.idproveedor %}">{{ Proveedores.idproveedor }}</a>
                             {% else %}
                                 {{ Proveedores.idproveedor }}
                             {% endif %}
                             </td>
                             <td>{{ Proveedores.nomproveedor }}</td>
-                            {% if perms.Cremeria_ToscanoApp.delete_proveedores %}
-                            <td><a href="{% url 'Cremeria_ToscanoApp:eliminarproveedor' Proveedores.idproveedor %}">Eliminar</a></td>
+                            {% if perms.Cremeria_Toscano_1.delete_proveedores %}
+                            <td><a href="{% url 'Cremeria_Toscano_1:eliminarproveedor' Proveedores.idproveedor %}">Eliminar</a></td>
                             {% endif %}
                         </tr>
                     {% endfor %}
