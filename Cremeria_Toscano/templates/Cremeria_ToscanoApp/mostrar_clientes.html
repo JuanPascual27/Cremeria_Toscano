@@ -1,0 +1,60 @@
+{% extends 'Cremeria_ToscanoApp/index.html' %}
+{% block titulo %}Clientes{% endblock titulo %}
+
+{% block formulario %}
+    <div class="acciones">
+        <div class="consultar">
+            <form method="POST">{% csrf_token %}
+                <input type="text", class="texto" name="consulta" placeholder="Buscar Cliente">
+                <button type="submit" class="boton_buscar">Buscar</button>
+            </form>
+        </div>
+        {% if perms.Cremeria_ToscanoApp.add_clientes %}
+        <div class="boton">
+            <a class="boton_agregar" href="{% url 'Cremeria_ToscanoApp:agregarcliente' %}">Agregar +</a>
+        </div>
+        {% endif %}
+    </div>
+    {% if clientes %}
+        <div class="dtabla">
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>IdCliente</th>
+                        <th>IdRuta</th>
+                        <th>Nombre Cliente</th>
+                        <th>Direccion Cliente</th>
+                        <th>Telefono/Celular</th>
+                        <th>Adeudos</th>
+                        {% if perms.Cremeria_ToscanoApp.delete_clientes %}
+                        <th></th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for Clientes in clientes %}
+                        <tr>
+                            <td>
+                            {% if perms.Cremeria_ToscanoApp.change_clientes %}
+                                <a href="{% url 'Cremeria_ToscanoApp:modificarcliente' Clientes.idcliente %}">{{ Clientes.idcliente }}</a>
+                            {% else %}
+                                {{ Clientes.idcliente }}
+                            {% endif %}
+                            </td>
+                            <td>{{ Clientes.idruta }}</td>
+                            <td>{{ Clientes.nombrecliente }}</td>
+                            <td>{{ Clientes.direccioncliente }}</td>
+                            <td>{{ Clientes.telefonocliente }}</td>
+                            <td>${{ Clientes.adeudos }}</td>
+                            {% if perms.Cremeria_ToscanoApp.delete_clientes %}
+                            <td><a href="{% url 'Cremeria_ToscanoApp:eliminarcliente' Clientes.idcliente %}">Eliminar</a></td>
+                            {% endif %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <h2>No existen Clientes registrados</h2>
+    {% endif %}
+{% endblock formulario %}

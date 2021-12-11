@@ -1,0 +1,16 @@
+{% extends 'Cremeria_ToscanoApp/index.html' %}
+{% block titulo %}Clientes | Eliminar Cliente{% endblock titulo %}
+
+{% block formulario %}
+    <div class="confirmar">
+        <form method="POST">{% csrf_token %}
+            <div>
+                <h2><strong>¿Esta seguro de eliminar el Cliente {{ object.idCliente }}?</strong></h2>
+            </div>
+            <div class="botones_con">
+                <div class="g"><button type="submit" class="guardar">Confirmar</button></div>
+                <div class="c"><a class="cancelar" href="{% url 'Cremeria_ToscanoApp:clientes' %}">Cancelar</a></div>
+            </div>
+        </form>
+    </div>
+{% endblock formulario %}
