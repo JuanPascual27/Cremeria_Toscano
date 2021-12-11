@@ -1,0 +1,43 @@
+{% extends 'Cremeria_ToscanoApp/index.html' %}
+{% block titulo %}Clientes | Agregar Cliente{% endblock titulo %}
+
+{% block formulario %}
+    <div class="agregar">
+        <div class="titulo_formulario">
+            <h2>{% block titulof %}Agregar Cliente{% endblock titulof %}</h2>
+        </div>
+        <div class="formulario">
+            <form method="POST">{% csrf_token %}
+                <div class="fila">
+                    <div class="lab">{{ form.idcliente.label }}</div>
+                    <div class="in">{{ form.idcliente }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.idruta.label }}</div>
+                    <div class="in">{{ form.idruta }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.nombrecliente.label }}</div>
+                    <div class="in">{{ form.nombrecliente }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.direccioncliente.label }}</div>
+                    <div class="in">{{ form.direccioncliente }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.telefonocliente.label }}</div>
+                    <div class="in">{{ form.telefonocliente }}</div>
+                </div>
+                <div class="fila">
+                    <div class="lab">{{ form.adeudos.label }}</div>
+                    <div class="in">{{ form.adeudos }}</div>
+                </div>
+                <div class="botones">
+                    <div class="g"><button type="submit" class="guardar">{% block boton %}Agregar{% endblock boton %}</button></div>
+                    <div class="c"><a class="cancelar" href="{% url 'Cremeria_ToscanoApp:clientes' %}">Cancelar</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+{% endblock formulario %}
