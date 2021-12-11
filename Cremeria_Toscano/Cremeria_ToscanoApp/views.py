@@ -127,7 +127,7 @@ class EliminarDetallesVenta(LoginRequiredMixin, ValidarPermisosMixin, DeleteView
 
 #Clientes
 class MostrarCliente(LoginRequiredMixin, ValidarPermisosMixin, ListView):
-    permission_required = 'Cremeria_ToscanoApp.view_clientes'
+    permission_required = 'Cremeria_Toscano_1.view_clientes'
 
     model = Clientes
     template_name = 'Cremeria_ToscanoApp/mostrar_clientes.html'
@@ -140,30 +140,30 @@ class MostrarCliente(LoginRequiredMixin, ValidarPermisosMixin, ListView):
         return render(request,self.template_name,{"clientes":clientes})
 
 class AgregarCliente(LoginRequiredMixin, ValidarPermisosMixin, CreateView):
-    permission_required = 'Cremeria_ToscanoApp.add_clientes'
+    permission_required = 'Cremeria_Toscano_1.add_clientes'
 
     model = Clientes
     form_class = ClientesForm
     template_name = 'Cremeria_ToscanoApp/formularios/agregar_cliente.html'
-    success_url = reverse_lazy('Cremeria_ToscanoApp:clientes')
+    success_url = reverse_lazy('Cremeria_Toscano_1:clientes')
 
 class ModificarCliente(LoginRequiredMixin, ValidarPermisosMixin, UpdateView):
-    permission_required = 'Cremeria_ToscanoApp.change_clientes'
+    permission_required = 'Cremeria_Toscano_1.change_clientes'
 
     model = Clientes
     form_class = ClientesForm
     template_name = 'Cremeria_ToscanoApp/formularios/modificar_cliente.html'
-    success_url = reverse_lazy('Cremeria_ToscanoApp:clientes')
+    success_url = reverse_lazy('Cremeria_Toscano_1:clientes')
 
 class EliminarCliente(LoginRequiredMixin, ValidarPermisosMixin, DeleteView):
-    permission_required = 'Cremeria_ToscanoApp.delete_clientes'
+    permission_required = 'Cremeria_Toscano_1.delete_clientes'
 
     model = Clientes
-    success_url = reverse_lazy('Cremeria_ToscanoApp:clientes')
+    success_url = reverse_lazy('Cremeria_Toscano_1:clientes')
 
 #Proveedores
 class MostrarProveedor(LoginRequiredMixin, ValidarPermisosMixin, ListView):
-    permission_required = 'Cremeria_ToscanoApp.view_proveedores'
+    permission_required = 'Cremeria_Toscano_1.view_proveedores'
 
     model = Proveedores
     template_name = 'Cremeria_ToscanoApp/mostrar_proveedores.html'
@@ -176,26 +176,26 @@ class MostrarProveedor(LoginRequiredMixin, ValidarPermisosMixin, ListView):
         return render(request,self.template_name,{"proveedores":proveedores})
 
 class AgregarProveedor(LoginRequiredMixin, ValidarPermisosMixin, CreateView):
-    permission_required = 'Cremeria_ToscanoApp.add_proveedores'
+    permission_required = 'Cremeria_Toscano_1.add_proveedores'
 
     model = Proveedores
     form_class = ProveedoresForm
     template_name = 'Cremeria_ToscanoApp/formularios/agregar_proveedor.html'
-    success_url = reverse_lazy('Cremeria_ToscanoApp:proveedores')
+    success_url = reverse_lazy('Cremeria_Toscano_1:proveedores')
 
 class ModificarProveedor(LoginRequiredMixin, ValidarPermisosMixin, UpdateView):
-    permission_required = 'Cremeria_ToscanoApp.change_proveedores'
+    permission_required = 'Cremeria_Toscano_1.change_proveedores'
 
     model = Proveedores
     form_class = ProveedoresForm
     template_name = 'Cremeria_ToscanoApp/formularios/modificar_proveedor.html'
-    success_url = reverse_lazy('Cremeria_ToscanoApp:proveedores')
+    success_url = reverse_lazy('Cremeria_Toscano_1:proveedores')
 
 class EliminarProveedor(LoginRequiredMixin, ValidarPermisosMixin, DeleteView):
-    permission_required = 'Cremeria_ToscanoApp.delete_proveedores'
+    permission_required = 'Cremeria_Toscano_1.delete_proveedores'
 
     model = Proveedores
-    success_url = reverse_lazy('Cremeria_ToscanoApp:proveedores')
+    success_url = reverse_lazy('Cremeria_Toscano_1:proveedores')
 
 
 class RespaldarRestaurar(LoginRequiredMixin, TemplateView):
