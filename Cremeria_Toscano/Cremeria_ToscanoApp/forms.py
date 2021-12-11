@@ -88,12 +88,14 @@ class DetallesVentasForm(forms.ModelForm):
             'idventa': forms.TextInput(
                 attrs = {
                     'class': 'input_texto',
+                    'name': 'idventa',
                     'placeholder': 'Ingrese el Id de la venta'
                 }
             ),
             'idproducto': forms.TextInput(
                 attrs = {
                     'class': 'input_texto',
+                    'name': 'id2',
                     'placeholder': 'Ingrese el Id del producto'
                 }
             ),
@@ -114,6 +116,90 @@ class DetallesVentasForm(forms.ModelForm):
                 attrs = {
                     'class': 'input_texto',
                     'placeholder': 'Ingrese el subtotalde la venta'
+                }
+            ),
+        }
+
+class ClientesForm(forms.ModelForm):
+    class Meta:
+        model = Clientes
+        fields = [
+            'idcliente',
+            'idruta',
+            'nombrecliente',
+            'direccioncliente',
+            'telefonocliente',
+            'adeudos',
+        ]
+        labels = {
+            'idcliente': 'Id del Cliente',
+            'idruta': 'Id de la Ruta',
+            'nombrecliente': 'Nombre del Cliente',
+            'direccioncliente': 'Direccion del Cliente',
+            'telefonocliente': 'Telefono o Celular del Cliente',
+            'adeudos': 'Adeudos del Cliente',
+        }
+        widgets = {
+            'idcliente': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el Id del cliente'
+                }
+            ),
+            'idruta': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el Id de la ruta'
+                }
+            ),
+            'nombrecliente': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el nombre completo del cliente'
+                }
+            ),
+            'direccioncliente': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese la direccion del cliente'
+                }
+            ),
+            'telefonocliente': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el telefono o celular del cliente'
+                }
+            ),
+            'adeudos': forms.NumberInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese los adeudos del cliente'
+                }
+            ),
+        }
+
+class ProveedoresForm(forms.ModelForm):
+    class Meta:
+        model = Proveedores
+        fields = [
+            'idproveedor',
+            'nomproveedor',
+        ]
+        labels = {
+            'idproveedor': 'Id del Proveedor',
+            'nomproveedor': 'Nombre del Proveedor',
+        }
+        widgets = {
+            'idproveedor': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el Id del proveedor'
+                }
+            ),
+            'nomproveedor': forms.TextInput(
+                attrs = {
+                    'class': 'input_texto',
+                    'placeholder': 'Ingrese el nombre completo del proveedor'
                 }
             ),
         }

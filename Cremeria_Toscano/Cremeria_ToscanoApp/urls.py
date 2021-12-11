@@ -15,4 +15,14 @@ urlpatterns = [
     path('agregarDetallesVenta/', AgregarDetallesVenta.as_view(), name='agregardetallesventas'),
     path('modificarDetallesVenta/<pk>', ModificarDetallesVenta.as_view(), name='modificardetallesventas'),
     path('eliminarDetallesVenta/<pk>', EliminarDetallesVenta.as_view(), name='eliminardetallesventas'),
+
+    path('proveedores/', MostrarProveedor.as_view(), name='proveedores'),
+    path('agregarProveedor/', AgregarProveedor.as_view(), name='agregarproveedor'),
+    path('modificarProveedor/<pk>', ModificarProveedor.as_view(), name='modificarproveedor'),
+    path('eliminarProveedor/<pk>', EliminarProveedor.as_view(), name='eliminarproveedor'),
+
+    path('clientes/', MostrarCliente.as_view(), name='clientes'),
+    path('agregarCliente/', AgregarCliente.as_view(), name='agregarcliente'),
+    path('modificarCliente/<pk>', ModificarCliente.as_view(), name='modificarcliente'),
+    path('eliminarCliente/<pk>', EliminarCliente.as_view(), name='eliminarcliente'),
 ]
